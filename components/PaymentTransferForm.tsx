@@ -48,7 +48,6 @@ const PaymentTransferForm = ({ accounts }: PaymentTransferFormProps) => {
   });
 
   const submit = async (data: z.infer<typeof formSchema>) => {
-    console.log("submit");
     setIsLoading(true);
 
     try {
