@@ -14,9 +14,9 @@ const BankCard = ({
     <div className="flex flex-col">
       <Link
         href={`/transaction-history/?id=${account.appwriteItemId}`}
-        className="bank-card "
+        className="bank-card min-w-[325px]"
       >
-        <div className="bank-card_content">
+        <div className="bank-card_content ">
           <div>
             <h1 className="text-16 font-semibold text-white">
               {account.name || userName}
@@ -45,7 +45,6 @@ const BankCard = ({
             className="ml-5"
           />
         </div>
-
         <Image
           src="/icons/lines.png"
           width={316}
@@ -54,7 +53,6 @@ const BankCard = ({
           className="absolute top-0 left-0"
         />
       </Link>
-      {console.log(account)}
       {showBalance && <Copy title={account?.shareableId} />}
     </div>
   );
